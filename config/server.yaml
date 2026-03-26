@@ -1,0 +1,43 @@
+server:
+  port: 8080
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://localhost:5173"
+  # Custom title displayed in the header (optional, defaults to "AtlasMap")
+  title: "Chicken Liver Single-Cell Atlas"
+
+# Single dataset (legacy format - still supported):
+# data:
+#   zarr_path: "/path/to/zarr/bins.zarr"
+#   soma_path: "/path/to/soma"
+
+# Multi-dataset format (the first dataset becomes the default):
+data:
+  chicken_liver:
+    zarr_path: "../data/chicken_liver/zarr/bins.zarr"
+    # soma_path: "../data/dataset_a/soma"  # optional
+
+# Example with BLASTP and SOMA:
+# data:
+#   pbmc:
+#     zarr_path: "/data/pbmc/zarr/bins.zarr"
+#     soma_path: "/data/pbmc/soma"
+#     blastp_path: "/data/pbmc/blast/proteins"
+#   liver:
+#     zarr_path: "/data/liver/zarr/bins.zarr"
+#     soma_path: "/data/liver/soma"
+#     blastp_path: "/data/liver/blast/proteins"
+
+cache:
+  tile_size_mb: 512
+  tile_ttl_minutes: 10
+
+render:
+  tile_size: 256
+  default_colormap: viridis
+
+# Differential expression analysis settings
+de:
+  max_concurrent: 1                      # Max concurrent DE jobs (default 1)
+  sqlite_path: "./data/de_jobs.sqlite"   # Path to SQLite database for job persistence
+  retention_days: 7                      # Days to keep completed job results (default 7)

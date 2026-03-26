@@ -1,0 +1,24 @@
+{
+  "name": "atlasmap-sc-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:cloudflare": "npm run build && node scripts/cloudflare-postbuild.mjs",
+    "build-cloudflare": "npm run build:cloudflare",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.12",
+    "@types/node": "^25.0.3",
+    "typescript": "^5.4.0",
+    "vite": "^5.4.0"
+  }
+}

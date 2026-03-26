@@ -1,0 +1,90 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.egg-info/
+.eggs/
+*.pyc
+.pyo
+.venv/
+venv/
+.uv/
+
+# Build outputs
+functions/
+dist/
+build/
+*.so
+*.o
+bin/
+
+# Frontend (Vite)
+.vite/
+
+# Go
+vendor/
+
+# Data files (large)
+/data
+*.rds
+*.h5ad
+*.zarr/
+*.soma/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Type checking
+.mypy_cache/
+.ruff_cache/
+.numba_cache/
+
+# Lock files (optional - uncomment if not tracking)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# uv.lock
+
+.gocache/
+.gopath/
+.gomodcache/
+.cache/
+.tools/
+TODO
+
+server/data/de_jobs.sqlite*
+server/data/blast_jobs.sqlite*
+
+benchmark_runs
+.cursor
